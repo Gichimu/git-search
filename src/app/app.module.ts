@@ -8,7 +8,7 @@ import { SearchDetailsComponent } from './components/search-details/search-detai
 import { FormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { HighlightDirectiveDirective } from './highlight-directive.directive'
+import { HighlightDirectiveDirective } from './highlight-directive.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { HighlightDirectiveDirective } from './highlight-directive.directive'
     SearchComponent,
     SearchDetailsComponent,
     NotFoundComponent,
-    HighlightDirectiveDirective,
+    HighlightDirectiveDirective
   ],
   imports: [
     BrowserModule,
