@@ -12,9 +12,10 @@
                 <div >
                     
                     <div *ngFor="let repo of repos" appHighlightDirective>
-                        <a href="repo.url">
+                        <a href="repo.repoUrl">
                             <p>{{repo.repoTitle}}</p>
-                            <small>{{repo.repoDescription}}</small>
+                            <small>{{repo.repoDescription}}</small><br/>
+                            <small><b>Created On: {{repo.createdAt | date}}</b></small>
                             <hr>
                         </a>
                     </div>
