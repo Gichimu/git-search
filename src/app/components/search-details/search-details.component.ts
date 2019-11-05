@@ -22,9 +22,7 @@ export class SearchDetailsComponent implements OnInit {
     
   }
 
-  goTo(link:string){
-    this.em.emit(link);
-  }
+  
 
   ngOnInit() {
     let searchName = this.route.snapshot.paramMap.get('searchName');
