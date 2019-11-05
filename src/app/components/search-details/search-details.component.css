@@ -1,0 +1,13 @@
+.jumbotron {
+    margin-top: 10%;
+}
+
+.main-content {
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}

@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-4 side-nav text-center">
+                <nav class="content">
+                    <img class="img-thumbnail img-responsive" src="{{url}}">
+                    <hr>
+                    <h5><b>{{name}}</b></h5>
+                </nav>
+            </div>
+            <div class="col-md-8 main-content text-center">
+                <div >
+                    
+                    <div *ngFor="let repo of repos" appHighlightDirective>
+                        <a href="repo.url">
+                            <p>{{repo.repoTitle}}</p>
+                            <small>{{repo.repoDescription}}</small>
+                            <hr>
+                        </a>
+                    </div>
+                        
+                
+                    
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
