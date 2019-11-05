@@ -12,7 +12,7 @@
                 <div >
                     
                     <div *ngFor="let repo of repos" appHighlightDirective>
-                        <div>
+                        <div (click)='goTo(repo.repoUrl)'>
                             <p>{{repo.repoTitle}}</p>
                             <small>{{repo.repoDescription}}</small><br/>
                             <small><b>Created On: {{repo.createdAt | date}}</b></small>

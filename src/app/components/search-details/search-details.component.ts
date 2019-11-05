@@ -1,4 +1,4 @@
-import { Component, OnInit,  } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { GitServiceService } from '../../services/git-service.service';
 import { ActivatedRoute } from '@angular/router';
 import { User } from '../../user';
@@ -13,15 +13,18 @@ export class SearchDetailsComponent implements OnInit {
   name: string;
   url: string;
   userArr = [];
+  repoUrl:string;
   user: User;
   repos = [];
   repository: Repository;
-
+  @Output() em = new EventEmitter<string>()
   constructor(private route:ActivatedRoute, public gitService: GitServiceService) { 
     
   }
 
-  
+  goTo(link:string){
+    this.em.emit(link);
+  }
 
   ngOnInit() {
     let searchName = this.route.snapshot.paramMap.get('searchName');
