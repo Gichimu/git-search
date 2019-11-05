@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,  } from '@angular/core';
 import { GitServiceService } from '../../services/git-service.service';
 import { ActivatedRoute } from '@angular/router';
 import { User } from '../../user';
@@ -20,6 +20,8 @@ export class SearchDetailsComponent implements OnInit {
   constructor(private route:ActivatedRoute, public gitService: GitServiceService) { 
     
   }
+
+  
 
   ngOnInit() {
     let searchName = this.route.snapshot.paramMap.get('searchName');

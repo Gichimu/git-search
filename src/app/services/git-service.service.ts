@@ -11,10 +11,8 @@ import { Repository } from '../repository';
 })
 export class GitServiceService {
   userObj: User;
-  // repoUrl: string;
   user = [];
   repos = [];
-  
   name: string;
   avatarUrl: string;
   repoObj: Repository;
@@ -32,25 +30,7 @@ export class GitServiceService {
     let searchUrl = "https://api.github.com/users/"+searchUsername+"/repos?access_token="+environment.api_key;
     let promise = new Promise((resolve, reject)=>{
       this.http.get<apiInterface>(searchUrl).toPromise().then((result)=>{
-        // this.user.username = result['login'];
-        //this.user.avatarUrl = result['avatar_url'];
-        // for(var i = 0; i < Object.keys(result).length; i++){
-        // //   //this.repoUrl = result['repos_url']
-        // //   this.repos.push(result[i]['name'], result[i]['description'], result[i]['html_url'], result[i]['created_at']);
-        //   // this.repos.push(result[i]['description']);
-        //   // this.repos.push();
-        //   // this.repos.push(result[i]['created_at'])
-        //   // this.repositories.repoTitle = result[i]['name'];
-        //   // this.repositories.repoDescription = result[i]['description'];
-        //   // this.repositories.repoUrl = result[i]['html_url'];
-        //   // this.repositories.createdAt = new Date(result[i]['created_at']);
-          
-        //   let name = result['data'][i]['owner']['login'];
-        //   let url = result['data'][i]['owner']['avatar_url'];
-
-        //   let usr = new User(name, url);
-        // this.name = result['data']['owner']['login'];
-        // this.avatarUrl = result['data']['owner']['avatar_url'];
+        
         for(var i = 0; i < Object.keys(result).length; i++){
           let name = result[i]['owner']['login'];
             
@@ -61,19 +41,7 @@ export class GitServiceService {
             this.user.push(usr);
             
           }
-        
-        
-        //   this.user.push(usr);
-          
-        // }
-        // this.userObj = result
-        
-       
-        // this.name = result[0]['owner']['login'];
-        // this.avatarUrl = result[0]['owner']['avatar_url'];
-        // this.user.avatarUrl = result[0]['owner']['avatar_url'];
-        // this.user.username = result[0]['owner']['login'];
-        // this.repoUrl = result[0]['owner']['repos_url'];
+    
         
         
         
@@ -97,10 +65,7 @@ export class GitServiceService {
     let searchUrl = "https://api.github.com/users/"+name+"/repos?access_token="+environment.api_key;
     let promise1 = new Promise((resolve, reject)=>{
       this.http.get<ApiInterface>(searchUrl).toPromise().then((results)=>{
-        // this.repositories.repoTitle = results['name'];
-        // this.repositories.repoDescription = results['description'];
-        // this.repositories.repoUrl = results['html_url'];
-        // this.repositories.createdAt = results['created_at'];
+        
         for(var i = 0; i < Object.keys(results).length; i++){
         let name = results[i]['name'];
           let desc = results[i]['description'];
