@@ -15,7 +15,7 @@
                         <a href="{{repo.repoUrl}}" >
                             <p>{{repo.repoTitle}}</p>
                             <small>{{repo.repoDescription}}</small><br/>
-                            <small><b>Created On: {{repo.createdAt | date}}</b></small>
+                            <small><b>Created {{repo.createdAt | dtPipe}} days ago</b></small>
                             <hr>
                         </a>
                     </div>

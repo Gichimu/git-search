@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HighlightDirectiveDirective } from './highlight-directive.directive';
+import { DtPipePipe } from './dt-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HighlightDirectiveDirective } from './highlight-directive.directive';
     SearchComponent,
     SearchDetailsComponent,
     NotFoundComponent,
-    HighlightDirectiveDirective
+    HighlightDirectiveDirective,
+    DtPipePipe
   ],
   imports: [
     BrowserModule,
