@@ -27,19 +27,10 @@ export class SearchDetailsComponent implements OnInit {
   ngOnInit() {
     let searchName = this.route.snapshot.paramMap.get('searchName');
     this.gitService.getUser(searchName).then(()=>{
-      // this.name = this.gitService.name;
-      // this.url = this.gitService.avatarUrl;
-      // this.repos = this.gitService.repos;
-      // this.user = this.gitService.userObj;
-      // this.repositories = this.gitService.repositories;
-      // console.log(this.user);
-      //this.name = this.gitService.userObj.username
-      // for(var i = 0; i < (this.gitService.repos).length; i++){
+      
        
       this.userArr = this.gitService.user;
-      // this.repos.push(this.gitService.repoObj);
-      // console.log(this.repos[i]);
-      // }
+      
       this.name = this.userArr[0].username;
       this.url = this.userArr[0].avatarUrl
       
